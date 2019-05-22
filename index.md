@@ -2432,4 +2432,4 @@ We can read the data directly from github. See additional details about the data
 ![png](Final_Version_college_majors_An_files/Final_Version_college_majors_An_13_1.png)
 
 
-The plot above shows the Percent of Women in each major category and their median salary.
+The plots above shows the Percent of Women in each major category and their median salary.
