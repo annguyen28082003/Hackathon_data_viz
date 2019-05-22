@@ -11,40 +11,11 @@ Note that there are other datasets available. The grad-students.csv contains det
 Major categories are from Carnevale et al, ["What's It Worth?: The Economic Value of College Majors."](http://cew.georgetown.edu/whatsitworth) Georgetown University Center on Education and the Workforce, 2011. 
 
 
-```
-import seaborn as sns
-# Check seaborn version - Make sure you restart runtime if seaborn updates!
-sns_version = (sns .__version__)
-if sns_version == "0.9.0":
-  print("You are good to go!")
-else:
-  !pip install seaborn --upgrade
-  print("\n \n Seaborn was updated. Please restart the notebook by going to Runtime > Restart runtime before running any further code.")
-```
-
-    You are good to go!
-
-
-
-```
-import pandas as pd
-import numpy as np
-import seaborn as sns
-from matplotlib import pyplot
-```
 
 We can read the data directly from github. See additional details about the dataset [here](https://github.com/fivethirtyeight/data/tree/master/college-majors).
 
 
-```
-majors = pd.read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv")
-women_stem = pd.read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/women-stem.csv")
-```
 
-
-```
-majors.head(100)
-```
 
 
 
@@ -1563,11 +1534,6 @@ majors.head(100)
 
 
 
-```
-women_stem.head(100)
-```
-
-
 
 
 <div>
@@ -2340,9 +2306,7 @@ women_stem.head(100)
 
 
 
-```
-women_stem.max()
-```
+
 
 
 
@@ -2361,9 +2325,6 @@ women_stem.max()
 
 
 
-```
-majors.max()
-```
 
 
 
@@ -2394,9 +2355,7 @@ majors.max()
 
 
 
-```
-women_stem.min()
-```
+
 
 
 
@@ -2415,9 +2374,7 @@ women_stem.min()
 
 
 
-```
-majors.min()
-```
+
 
 
 
@@ -2448,10 +2405,7 @@ majors.min()
 
 
 
-```
-g = sns.FacetGrid(majors, col="Major_category", height=3, aspect=1.5,col_wrap=4)
-g.map(sns.scatterplot, "ShareWomen", "Median")
-```
+
 
 
 
@@ -2465,22 +2419,14 @@ g.map(sns.scatterplot, "ShareWomen", "Median")
 
 
 
-```
-fig, ax = pyplot.subplots(figsize=(10,10))
-ax = sns.barplot(y="Major_category", x="ShareWomen", data=majors)
-```
+
 
 
 ![png](Final_Version_college_majors_An_files/Final_Version_college_majors_An_12_0.png)
 
 
 
-```
-fig, ax = pyplot.subplots(figsize=(10,10))
-sns.scatterplot(y="Major_category", x="ShareWomen", data=majors, size="Median", ax=ax, sizes = (30,250), hue="Median", palette="viridis")
 
-#y shows the Major_category, x shows percent of ShareWomen. The Median shows by the color and size of each circle. Every data is took from majors.
-```
 
 
 
