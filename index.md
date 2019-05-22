@@ -2410,10 +2410,6 @@ We can read the data directly from github. See additional details about the data
 
 
 
-    <seaborn.axisgrid.FacetGrid at 0x7f5b497f1f28>
-
-
-
 
 ![png](Final_Version_college_majors_An_files/Final_Version_college_majors_An_11_1.png)
 
@@ -2429,9 +2425,6 @@ We can read the data directly from github. See additional details about the data
 
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f5b48a48438>
 
 
 
